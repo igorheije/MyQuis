@@ -1,0 +1,30 @@
+.sideBarContainer {
+  width: 80px;
+  height: 100vh;
+
+  background: #77ba99;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+}
+.sideBarContainer a i {
+  font-size: 2rem;
+  color: white;
+  margin: 10px;
+}
+@media (max-width: 980px) {
+  .sideBarContainer {
+    width: 100vw;
+    height: 80px;
+
+    background: #77ba99;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+}

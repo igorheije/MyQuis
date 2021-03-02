@@ -1,0 +1,102 @@
+.ContainerLogin {
+  width: 100%;
+  height: 100vh;
+
+  background: darkgrey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Login {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 600px;
+
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  background: #596ce1;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.Login h1 {
+  color: #191970;
+
+  align-self: start;
+}
+.Login span {
+  align-self: start;
+  color: #191970;
+  margin-bottom: 50px;
+  flex: 1;
+  display: flex;
+}
+.Login span > strong {
+  margin-top: 10px;
+}
+
+.Login > p {
+  align-self: start;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+.Login > p strong {
+  color: #191970;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.formName {
+  width: 100%;
+  text-align: end;
+  margin-top: 50px;
+}
+
+.formName input {
+  padding: 10px;
+  color: white;
+  background: #5965e0;
+  border: 1px solid #191970;
+
+  font-size: 1.2rem;
+
+  outline: none;
+
+  border-radius: 12px 0 0 12px;
+}
+
+.formName button {
+  padding: 11px;
+  color: white;
+  background: #191970;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+  border-radius: 0 12px 12px 0;
+
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.formName button:hover {
+  background: #00008b;
+}
+.formName input::placeholder {
+  color: white;
+}
+.divAvatar {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+}
