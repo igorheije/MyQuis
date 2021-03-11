@@ -16,6 +16,7 @@ interface CountdownProviderProps {
 interface PropsUserContext {
   user: UserContext;
   setUser: Dispatch<React.SetStateAction<UserContext>>;
+  signInSuccess: (token: string) => void;
 }
 
 const defaultUser: PropsUserContext = {
@@ -23,6 +24,7 @@ const defaultUser: PropsUserContext = {
     userName: '',
   },
   setUser: () => {},
+  signInSuccess: () => {},
 };
 
 export const UserContext = createContext<PropsUserContext>(defaultUser);
@@ -30,15 +32,25 @@ export const UserContext = createContext<PropsUserContext>(defaultUser);
 const UserProvider = ({ children }: CountdownProviderProps) => {
   const [user, setUser] = useState(defaultUser.user);
 
+  const signInSuccess = (usuario: string): void => {
+    window.localStorage.setItem('usuario', usuario);
+    console.log('usuario', usuario);
+
+    setUser({ userName: usuario });
+  };
   useEffect(() => {
-    console.log(user);
-  }, [user]);
+    const usuario = window.localStorage.getItem('usuario');
+    if (usuario) {
+      setUser({ userName: usuario });
+    }
+  }, []);
 
   return (
     <UserContext.Provider
       value={{
         user,
         setUser,
+        signInSuccess,
       }}
     >
       {children}

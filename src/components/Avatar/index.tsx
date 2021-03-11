@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AvatarContext } from '../../contexts/AvatarContext';
 import './style.css';
 
-import Avartar from '../../assets/avatares/avatar1.png';
+interface PropsAvatar {
+  srcAvatar: string;
+}
 
-const Avatar = () => {
+const Avatar = ({ srcAvatar }: PropsAvatar) => {
+  const { saveAvatar } = useContext(AvatarContext);
+
   return (
     <div className="containerAvatar">
-      <button className="avatar">
-        <img src={Avartar} alt="Avatar1" />
+      <button className="avatar" onClick={() => saveAvatar(srcAvatar)}>
+        <img src={`${srcAvatar}`} alt="Avatar1" />
       </button>
     </div>
   );

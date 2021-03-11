@@ -4,13 +4,23 @@ import { FormikProvider, useFormik } from 'formik';
 import * as yup from 'yup';
 import './style.css';
 import { UserContext } from '../../contexts/UserContext';
+import { useHistory } from 'react-router-dom';
+import Avartar1 from '../../assets/avatares/avatar1.png';
+import Avartar2 from '../../assets/avatares/avatar2.png';
+import Avartar3 from '../../assets/avatares/avatar3.png';
+import Avartar4 from '../../assets/avatares/avatar4.png';
+import Avartar5 from '../../assets/avatares/avatar5.png';
+import Avartar6 from '../../assets/avatares/avatar6.png';
+import Avartar7 from '../../assets/avatares/avatar7.png';
+import Avartar8 from '../../assets/avatares/avatar8.png';
 
 const schemaRegister = yup.object().shape({
   name: yup.string().required('Digite um nome'),
 });
 
 const Login = () => {
-  const { setUser } = useContext(UserContext);
+  const { signInSuccess } = useContext(UserContext);
+  const history = useHistory();
 
   const initialValues = {
     name: '',
@@ -20,9 +30,10 @@ const Login = () => {
     initialValues,
     validationSchema: schemaRegister,
     onSubmit: async (values) => {
-      console.log(values);
-      setUser({ userName: values.name });
-      console.log(!formik.isValid);
+      signInSuccess(values.name);
+      console.log(history);
+
+      history.push('/home');
     },
   });
 
@@ -37,14 +48,14 @@ const Login = () => {
           <strong> NickName</strong> para começarmos.
         </p>
         <div className="divAvatar">
-          <Avatar />
-          <Avatar />
-          <Avatar />
-          <Avatar />
-          <Avatar />
-          <Avatar />
-          <Avatar />
-          <Avatar />
+          <Avatar srcAvatar={Avartar1} />
+          <Avatar srcAvatar={Avartar2} />
+          <Avatar srcAvatar={Avartar3} />
+          <Avatar srcAvatar={Avartar4} />
+          <Avatar srcAvatar={Avartar5} />
+          <Avatar srcAvatar={Avartar6} />
+          <Avatar srcAvatar={Avartar7} />
+          <Avatar srcAvatar={Avartar8} />
         </div>
 
         <FormikProvider value={formik}>
