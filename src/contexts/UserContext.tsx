@@ -34,8 +34,6 @@ const UserProvider = ({ children }: CountdownProviderProps) => {
 
   const signInSuccess = (usuario: string): void => {
     window.localStorage.setItem('usuario', usuario);
-    console.log('usuario', usuario);
-
     setUser({ userName: usuario });
   };
   useEffect(() => {

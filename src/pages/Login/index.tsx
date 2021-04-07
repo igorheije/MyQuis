@@ -31,8 +31,6 @@ const Login = () => {
     validationSchema: schemaRegister,
     onSubmit: async (values) => {
       signInSuccess(values.name);
-      console.log(history);
-
       history.push('/home');
     },
   });

@@ -26,7 +26,7 @@ const Countdown = () => {
       </div>
       {false ? (
         <button className="countdownButton" disabled>
-          Ciclo encerrado
+          Desafio encerrado
         </button>
       ) : (
         <>
@@ -36,7 +36,7 @@ const Countdown = () => {
               type="button"
               onClick={resetCountdown}
             >
-              Abandonar Ciclo
+              Abandonar Desafio
             </button>
           ) : (
             <button
@@ -44,7 +44,7 @@ const Countdown = () => {
               type="button"
               onClick={startCountdown}
             >
-              Iniciar um Ciclo
+              Iniciar Desafio
             </button>
           )}
         </>

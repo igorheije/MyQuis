@@ -13,6 +13,9 @@
   padding: 10px;
   border-radius: 50%;
 }
-.avatar:focus {
-  outline: 1px solid #191970;
+/* .avatar:focus {
+  outline: solid 1px #191970;
+} */
+.avatar:active {
+  outline: solid 1px #191970;
 }

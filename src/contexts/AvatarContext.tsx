@@ -34,8 +34,6 @@ const AvatarProvider = ({ children }: CountdownProviderProps) => {
 
   const saveAvatar = (avatar: string): void => {
     window.localStorage.setItem('avatar', avatar);
-    console.log('avatar', avatar);
-
     setAvatar({ Iavatar: avatar });
   };
   useEffect(() => {

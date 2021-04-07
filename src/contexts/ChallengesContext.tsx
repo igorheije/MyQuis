@@ -80,6 +80,7 @@ export const ChallengeProvider = ({
     const challengesIndex = Math.floor(Math.random() * challenges.length);
     const challenge = challenges[challengesIndex];
     console.log(challenge);
+    console.log(challenges);
 
     // setActiveChallenge(challenge);
 

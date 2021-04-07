@@ -73,7 +73,7 @@
 
 .upLevelChallengeActive footer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 .upLevelChallengeActive footer button {
@@ -96,10 +96,29 @@
 
   transition: 0.2s;
 }
-.challegenFaledButton {
+.challegenNext {
   background: #d33f49;
 }
-
+.challengeForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.challengeForm h3 {
+  font-size: 1.2rem;
+  align-self: center;
+}
+.challengeForm label {
+  margin-top: 10px;
+  padding: 10px;
+}
+.challengeForm label input {
+  margin-right: 5px;
+}
+.challengeForm label span {
+  align-items: start;
+}
 .challegenSuccedeButton {
   background: #77ba50;
 }
